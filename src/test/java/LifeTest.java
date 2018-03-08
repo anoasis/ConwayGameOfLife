@@ -1,5 +1,4 @@
-package com.demo;
-
+import com.demo.Life;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -13,7 +12,8 @@ public class LifeTest {
         life.setAlive(1,4);
         assertEquals(0,life.countAliveNeighbors(0,0));
         assertEquals(1,life.countAliveNeighbors(1,1));
-        assertEquals(2,life.countAliveNeighbors(1,2));
+        assertEquals(1,life.countAliveNeighbors(1,2));
+        assertEquals(2,life.countAliveNeighbors(1,3));
     }
 
     @Test
