@@ -74,5 +74,27 @@ public class Life {
             }
         }
         currentGen = nextGen;
+        nextGen = new boolean[WIDTH][HEIGHT];
+    }
+
+    public static void main(String[] args) {
+        Life life = new Life(10,10);
+        life.setAlive(1,1);
+        life.setAlive(2,1);
+        life.setAlive(3,1);
+        life.setAlive(5,5);
+        life.setAlive(5,6);
+        life.setAlive(6,5);
+        life.setAlive(6,6);
+        life.setAlive(5,5);
+        life.setAlive(5,6);
+        life.setAlive(6,5);
+        life.setAlive(6,6);
+        for (int i = 0; i < 10; i++) {
+            life.display();
+            life.tick();
+            System.out.println("\n=========="+i+"th gen==========\n");
+        }
+
     }
 }

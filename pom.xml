@@ -8,7 +8,6 @@
     <artifactId>game-of-life</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
-
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
@@ -17,4 +16,21 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.3.2</version>
+                <configuration>
+                    <mainClass>com.demo.Life</mainClass>
+                    <arguments>
+                        <argument>-jar</argument>
+                        <argument>target/game-of-life-1.0-SNAPSHOT.jar</argument>
+                    </arguments>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
