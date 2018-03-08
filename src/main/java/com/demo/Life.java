@@ -42,11 +42,11 @@ public class Life {
         currentGen[x][y]=false;
     }
 
-    public void aliveInNextLife(int x, int y) {
+    public void setAliveInNextGen(int x, int y) {
         nextGen[x][y]=true;
     }
 
-    public void deadInNextLife(int x, int y) {
+    public void setDeadInNextGen(int x, int y) {
         nextGen[x][y]=false;
     }
 
@@ -67,10 +67,10 @@ public class Life {
             for (int x = 0; x < WIDTH; x++) {
                 int aliveNeighbors = countAliveNeighbors(x,y);
                 if(isAlive(x,y)){
-                    if(aliveNeighbors==2 || aliveNeighbors==3) aliveInNextLife(x,y);
-                    else if(aliveNeighbors<2 && aliveNeighbors>3) deadInNextLife(x,y);
+                    if(aliveNeighbors==2 || aliveNeighbors==3) setAliveInNextGen(x,y);
+                    else if(aliveNeighbors<2 && aliveNeighbors>3) setDeadInNextGen(x,y);
                 }
-                else if(aliveNeighbors==3) aliveInNextLife(x,y);
+                else if(aliveNeighbors==3) setAliveInNextGen(x,y);
             }
         }
         currentGen = nextGen;
