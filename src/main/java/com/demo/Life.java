@@ -82,18 +82,19 @@ public class Life {
         life.setAlive(1,1);
         life.setAlive(2,1);
         life.setAlive(3,1);
+        life.setAlive(0,5);
+        life.setAlive(0,6);
+        life.setAlive(1,5);
+        life.setAlive(1,6);
+        life.setAlive(4,4);
         life.setAlive(5,5);
-        life.setAlive(5,6);
         life.setAlive(6,5);
-        life.setAlive(6,6);
-        life.setAlive(5,5);
+        life.setAlive(4,6);
         life.setAlive(5,6);
-        life.setAlive(6,5);
-        life.setAlive(6,6);
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i <= 15; i++) {
+            System.out.println("\n=========="+i+"th gen==========\n");
             life.display();
             life.tick();
-            System.out.println("\n=========="+i+"th gen==========\n");
         }
 
     }
