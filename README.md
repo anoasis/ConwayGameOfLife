@@ -1,4 +1,6 @@
 # ConwayGameOfLife
 https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life
 
-run "mvn test"
+try run "mvn test"
+
+and run "mvn exec:java"
